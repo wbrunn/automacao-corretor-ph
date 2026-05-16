@@ -26,14 +26,13 @@ O processo se repete até o produto estar com pH entre 6.5 e 7.5 para assim ser 
 ![Lógica Ladder - Corretor pH](screenshots/screenshot_corretor_ph.png)
 
 - Interface Homem-Máquina: Interface para o monitoramento do programa. Nela estão presentes LEDs para indicar quando um sensor ou atuador está ativo e uma barra de preenchimento vertical para indicar o tempo restante do misturador. Além disso, um contador indica quantas misturas já foram concluídas.
-![IHM - Interface Homem-Máquina](screenshots/screenshot_ihm.png)
+![IHM - Interface Homem-Máquina](screenshots/screenshot_IHM.png)
 
 - Protocolo ModbusTCP & Python: Comunicação entre o CLP e um programa python. O protocolo ModbusTCP e a biblioteca pymodbusTCP foram utilizados para o monitoramento de dados. Quando há alguma alteração entre as válvulas ou sensores, o python detecta e imprime os estados atuais no terminal.
 ![ModbusTCP - Comunicação CLP - Python](screenshots/screenshot_modbus.png)
 ![Python - Mini SCADA](screenshots/screenshot_mini_scada_python.png)
 
 - Protocolo Profinet: Foi simulado uma remota com o intuito de testar a comunicação através do protocolo Profinet. Diferentes tipos de entradas e saídas (analógicas e digitais) foram mapeadas para que o protocolo pudesse enviar e receber dados sobre os sensores e atuadores.
-![Profinet - Comunicação CLP - Remota](screenshots/screenshot_profinet_digital_input.png)
 ![Profinet - Comunicação CLP - Remota](screenshots/screenshot_profinet_digital_output.png)
 
 Tecnologias
