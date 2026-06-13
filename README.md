@@ -26,6 +26,7 @@ O sensor analógico de pH é utilizado no bloco SCALE_R para converter o sinal e
 O processo se repete até o produto estar com pH entre 6.5 e 7.5 para assim ser descartado.
 ![Lógica Ladder - Corretor pH](screenshots/screenshot_corretor_ph.png)
 
+<<<<<<< HEAD
 - Interface Homem-Máquina - Ignition SCADA (Perspective):
 O monitoramento e controle da planta foram implementados utilizando o **Ignition Maker Edition (Módulo Perspective)**, seguindo os preceitos de IHM de Alta Performance.
 1. Arquitetura Modular: Utilização de UDTs (User-Defined Types) para representar os motores, válvulas e sensores, permitindo a escalabilidade para múltiplos tanques simultâneos.
@@ -36,6 +37,23 @@ O monitoramento e controle da planta foram implementados utilizando o **Ignition
 
 - Integração Modbus TCP: Conexão direta e bidirecional com os registradores `%IW` e `%QW` do CODESYS, gerenciando as variáveis de entrada e saída de acordo com os tipos de dados.
 ![ModbusTCP - Comunicação CLP - SCADA](screenshots/screenshot_modbus.png)
+=======
+- Interface Homem-Máquina: Interface para o monitoramento do programa. Nela estão presentes LEDs para indicar quando um sensor ou atuador está ativo e uma barra de preenchimento vertical para indicar o tempo restante do misturador. Além disso, um contador indica quantas misturas já foram concluídas.
+![IHM - Interface Homem-Máquina](screenshots/screenshot_IHM.png)
+
+- Protocolo ModbusTCP & Python: Comunicação entre o CLP e um programa python. O protocolo ModbusTCP e a biblioteca pymodbusTCP foram utilizados para o monitoramento de dados. Quando há alguma alteração entre as válvulas ou sensores, o python detecta e imprime os estados atuais no terminal.
+![ModbusTCP - Comunicação CLP - Python](screenshots/screenshot_modbus.png)
+![Python - Mini SCADA](screenshots/screenshot_mini_scada_python.png)
+
+- Protocolo Profinet: Foi simulado uma remota com o intuito de testar a comunicação através do protocolo Profinet. Diferentes tipos de entradas e saídas (analógicas e digitais) foram mapeadas para que o protocolo pudesse enviar e receber dados sobre os sensores e atuadores.
+![Profinet - Comunicação CLP - Remota](screenshots/screenshot_profinet_digital_output.png)
+
+Tecnologias
+- CODESYS V3.5 (SoftPLC)
+- Profinet
+- ModbusTCP
+- Python
+>>>>>>> 90a0a4bb8ea5b6fe4914f844301b3dfd79e1add7
 
 Tecnologias Utilizadas
 - CODESYS V3.5: Programação CLP e Modbus TCP Server
